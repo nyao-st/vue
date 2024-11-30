@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Vue.js のサンプル</title>
+    <script src="https://unpkg.com/vue@3.5.0/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <h1>Vue3</h1>
+    <div id="app">
+      {{message}}
+    </div>
+    <script>
+      const appdata = { // appにデータ、オブジェクトを格納
+        data(){ // data関数はreturnの中身を返す
+          return{
+            message: "Hello Vue"
+          }
+        }
+      }
+      // // Id="#app"で指定したエレメントにスクリプトをマウント、連携する
+      Vue.createApp(appdata).mount('#app')
+    </script>
+  </body>
+</html>
